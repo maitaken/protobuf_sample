@@ -1,0 +1,25 @@
+syntax = "proto3";
+package message;
+
+// import "google/protobuf/timestamp.proto";
+
+option go_package  = "github.com/maitaken/protobuf_sample/proto";
+
+message Person {
+    string name = 1;
+    int64 id = 2;
+    string email = 3;
+
+    enum PhoneType {
+        MOBILE = 0;
+        HOME = 1;
+        WORK = 2;
+    }
+
+    message Number {
+        string number = 1;
+        PhoneType type = 2;
+    }
+
+    repeated Number phones = 4;
+}

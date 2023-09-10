@@ -1,0 +1,4 @@
+*.pb.go
+*_pb2.py
+
+.venv
